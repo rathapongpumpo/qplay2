@@ -1,14 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource/noto-sans-thai/400.css";
-import "@fontsource/noto-sans-thai/500.css";
-import "@fontsource/noto-sans-thai/600.css";
-import "@fontsource/noto-sans-thai/700.css";
-import "@fontsource/noto-sans-thai/800.css";
-import "@fontsource/outfit/500.css";
-import "@fontsource/outfit/600.css";
-import "@fontsource/outfit/700.css";
-import "@fontsource/outfit/800.css";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const thai = localFont({
+  src: "../node_modules/@fontsource-variable/noto-sans-thai/files/noto-sans-thai-thai-wght-normal.woff2",
+  weight: "100 900", style: "normal", display: "swap", variable: "--font-thai", adjustFontFallback: false,
+});
+const latin = localFont({
+  src: "../node_modules/@fontsource-variable/noto-sans-thai/files/noto-sans-thai-latin-wght-normal.woff2",
+  weight: "100 900", style: "normal", display: "swap", variable: "--font-latin", adjustFontFallback: false,
+});
+const outfit = localFont({
+  src: "../node_modules/@fontsource-variable/outfit/files/outfit-latin-wght-normal.woff2",
+  weight: "100 900", style: "normal", display: "swap", variable: "--font-outfit", adjustFontFallback: false,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")),
@@ -24,5 +29,5 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { themeColor: "#061c49" };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="th"><body>{children}</body></html>;
+  return <html lang="th" className={`${thai.variable} ${latin.variable} ${outfit.variable}`}><body>{children}</body></html>;
 }

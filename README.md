@@ -38,7 +38,7 @@ npm run build
 npx vercel --prod
 ```
 
-ไฟล์นี้เตรียมพร้อมสำหรับ deploy; การสร้างเว็บครั้งนี้ยังไม่ได้เผยแพร่ production
+Production: https://kriton.vercel.app/
 
 ## แก้ข้อมูล
 
@@ -54,7 +54,7 @@ npx vercel --prod
 
 หน้านี้รับการสอบถามและสั่งซื้อผ่าน LINE/โทรศัพท์ ไม่มีระบบชำระเงินหรือเติมเกมอัตโนมัติ รายการเกมและบัตรอ้างอิงภาพต้นแบบ ไม่มีการกำหนดราคา เวลาให้บริการ หรือส่วนลดที่ยังไม่ได้รับข้อมูล
 
-ฟอนต์เก็บในโปรเจกต์ผ่าน Fontsource ภาพ hero และโปรโมชันสร้างใหม่ด้วยเครื่องมือ Image Gen; artwork เกมใช้ภาพต้นแบบของผู้ใช้
+ฟอนต์แบบ variable เก็บในโปรเจกต์ผ่าน Fontsource และ preload ด้วย `next/font/local` ใช้ 3 ไฟล์แทนการแยกแต่ละน้ำหนัก ภาพ hero ใช้ quality 75 และ fetch priority สูง ภาพ hero และโปรโมชันสร้างใหม่ด้วยเครื่องมือ Image Gen; artwork เกมใช้ภาพต้นแบบของผู้ใช้
 
 `NEXT_PUBLIC_SITE_URL` เป็นตัวเลือกสำหรับ custom domain ถ้าไม่ตั้ง ระบบใช้ URL จาก Vercel สำหรับ social preview อัตโนมัติ
 

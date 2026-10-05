@@ -10,7 +10,7 @@ export default function Home() {
     <Header />
     <main id="main">
       <section className="hero" id="home" aria-labelledby="hero-heading">
-        <Image className="hero-art" src="/images/hero.webp" alt="นักรบแฟนตาซีและตัวละครเกมพร้อมเพชรสีฟ้าและเหรียญทอง" fill priority sizes="100vw" quality={90} />
+        <Image className="hero-art" src="/images/hero.webp" alt="นักรบแฟนตาซีและตัวละครเกมพร้อมเพชรสีฟ้าและเหรียญทอง" fill preload fetchPriority="high" sizes="100vw" quality={75} />
         <div className="hero-inner container"><div className="hero-copy">
           <h1 id="hero-heading">เติม<span className="cyan-text">เกม</span><span className="gold-text">ออนไลน์</span><br />สนุกได้ <span className="cyan-text">ไม่มีสะดุด</span></h1>
           <p>เลือกเกมที่ใช่ แล้วทัก <strong>LINE</strong> ให้เราดูแล</p>
