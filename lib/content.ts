@@ -1,6 +1,6 @@
 export const contact = {
   brand: "Kriton LtD.",
-  company: "บริษัท กฤตอน จำกัด",
+  company: "บริษัท กฤตออน จำกัด",
   phone: "0982341377",
   phoneDisplay: "098 234 1377",
   line: "https://lin.ee/Y03gaLz",
